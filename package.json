@@ -1,0 +1,21 @@
+{
+  "name": "thegallery.io",
+  "version": "1.0.0",
+  "description": "The Gallery Website Archive",
+  "main": "index.html",
+  "author": "Clovis Rosa",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "clr": "rm -rf node_modules yarn.lock"
+  },
+  "devDependencies": {
+    "sass": "^1.43.2",
+    "vite": "^2.6.7"
+  },
+  "dependencies": {
+    "middleware": "^1.0.0"
+  }
+}
