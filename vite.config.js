@@ -1,39 +1,15 @@
-// // vite.config.js
-// const middleware = () => {
-//   return {
-//     name: "middleware",
-//     apply: "serve",
-//     configureServer(viteDevServer) {
-//       return () => {
-//         viteDevServer.middlewares.use(async (req, res, next) => {
-//           if (!req.originalUrl.endsWith(".html") && req.originalUrl !== "/") {
-//             req.url = `/src/` + req.originalUrl + ".html";
-//           } else if (req.url === "/index.html") {
-//             req.url = `/src/` + req.url;
-//           }
+import { defineConfig } from "vite";
 
-//           next();
-//         });
-//       };
-//     },
-//   };
-// };
-
-// export default {
-//   plugins: [middleware()],
-//   root: "src",
-//   publicDir: "../public",
-//   resolve: {
-//     alias: { "/src": resolve(process.cwd(), "src") },
-//   },
-//   build: {
-//     outDir: "../dist",
-//   },
-// };
-
-module.exports = {
+// https://vitejs.dev/config/
+export default defineConfig({
   root: "src",
   build: {
     outDir: "../dist",
   },
-};
+  server: {
+    port: 3000,
+  },
+  preview: {
+    port: 3000,
+  },
+});
